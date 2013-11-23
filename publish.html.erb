@@ -1,0 +1,48 @@
+<h2>成果發表</h2>
+<p>若您有與萌典相關的開發成果，無論類型為何都歡迎在此發表。</p>
+<!-- 考慮依據選擇的類型提供不同的 form ，可參考提出需求 / 回報問題頁面 -->
+<div class="main-form">
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label"><span class="required">*</span>類型</label>
+      <div class="controls">
+        <select>
+          <option>網站</option>
+          <option>APP</option>
+          <option>資料整理</option>
+          <option>API</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">標題</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" placeholder="成果名稱">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">說明</label>
+      <div class="controls">
+        <textarea rows="5" class="input-xxlarge"></textarea>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">截圖</label>
+      <div class="controls">
+        <input type="file" title="上傳圖片" />
+        <span class="help-block">建議使用 200px * 200px 之正方形圖片。</span>
+      </div>
+    </div>
+    <div class="form-actions">
+      <a href="#" class="btn btn-primary">送出</a>
+    </div>
+  </form>
+</div>
+<% content_for :js do %>
+<script src="javascripts/bootstrap.file-input.js"></script>
+<script>
+$(function(){
+  $('input[type=file]').bootstrapFileInput();
+});
+</script>
+<% end %>

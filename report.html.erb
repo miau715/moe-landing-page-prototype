@@ -1,0 +1,64 @@
+<h2>提出需求 / 回報問題</h2>
+如果您對萌典相關專案有任何需求或問題，都可以在這裡反應。
+<!-- 考慮依據選擇的類型提供不同的 form -->
+
+<div class="main-form">
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label"><span class="required">*</span>類型</label>
+      <div class="controls">
+        <label class="radio inline">
+          <input type="radio" name="type" id="radio-request" value="request"> 提出需求
+        </label>
+        <label class="radio inline">
+          <input type="radio" name="type" id="radio-report" value="report"> 回報問題
+        </label>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label"><span class="required">*</span>主旨</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge">
+      </div>
+    </div>
+    <div class="control-group report-only">
+      <label class="control-label">問題頁面網址</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label"><span class="required">*</span>說明</label>
+      <div class="controls">
+        <textarea rows="5" class="input-xxlarge"></textarea>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">圖片</label>
+      <div class="controls">
+        <input type="file" title="上傳圖片" />
+      </div>
+    </div>
+    <div class="form-actions">
+      <a href="#" class="btn btn-primary">送出</a>
+    </div>
+  </form>
+</div>
+
+<% content_for :js do %>
+<script src="javascripts/bootstrap.file-input.js"></script>
+<script>
+$(function(){
+  $('input[type=file]').bootstrapFileInput();
+  $(".report-only").hide();
+  $("input[type=radio][name=type]").on("click", function(){
+    if ($("#radio-report").prop("checked")) {
+        $(".report-only").slideDown("fast");
+    }
+    else {
+        $(".report-only").slideUp("fast");
+    }
+  });
+});
+</script>
+<% end %>

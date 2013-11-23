@@ -1,0 +1,20 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <h1><a class="brand" href="/index.html">萌典入口網</a></h1>
+      <div class="nav-collapse collapse navbar-responsive-collapse">
+        <ul class="nav">
+          <li<%= ' class="active"' if request.path == "/index.html" || request.path == "/" %>><a href="/index.html">首頁</a></li>
+          <li<%= ' class="active"' if request.path == "/resources.html" %>><a href="/resources.html">參與專案</a></li>
+          <li<%= ' class="active"' if request.path == "/publish.html" %>><a href="/publish.html">成果發表</a></li>
+          <li<%= ' class="active"' if request.path == "/report.html" %>><a href="/report.html">提出需求 / 回報問題</a></li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div>
+  </div>
+</div>

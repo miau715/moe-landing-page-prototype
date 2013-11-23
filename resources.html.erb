@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="span3 resources-sidebar">
+    <ul class="span3 nav nav-tabs nav-stacked affix">
+      <li><a href="#current-projects"><i class="icon-chevron-right"></i>現有專案</a></li> 
+      <li><a href="#"><i class="icon-chevron-right"></i>資料來源</a></li>
+      <li><a href="#"><i class="icon-chevron-right"></i>資料解析</a></li> 
+      <li><a href="#"><i class="icon-chevron-right"></i>API</a></li> 
+    </ul>
+  </div>
+  <div class="span9">
+    <h2>參與專案</h2> 
+    <p>此頁面列出目前與萌典專案相關的資料：</p>
+    <section id="current-projects">
+      <h3>現有專案</h3>
+      <ul class="resource-list">
+        <% 5.times do %>
+        <li>
+          <h4>專案/資料名稱</h4>
+          <a href="#" class="btn btn-mini collapse-switch"><i class="icon-double-angle-down"></i></a>
+          <div class="btn-group">
+            <a herf="#" class="btn"><i class="icon-globe"> 網站</i></a>
+            <a herf="#" class="btn"><i class="icon-github-alt"> Github</i></a>
+          </div>
+          <div class="more-block">
+            <div class="description">
+              <p>敘述，可放各類型內容（希望有內建像 ckeditor 之類的編輯器）。</p>
+<pre>
+&lt;h1&gt;也許可以貼程式碼&lt;/h1&gt;
+</pre>
+            </div>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+    </section>
+  </div>
+</div>
+<% content_for :js do %>
+<script>
+$(function(){
+  $(".resource-list .more-block").hide();
+  $(".resource-list a.collapse-switch").on("click", function(e) {
+    e.preventDefault();
+    $(this).closest("li").toggleClass("highlight").find(".more-block").slideToggle();
+    $(this).find("i").toggleClass("icon-double-angle-down").toggleClass("icon-double-angle-up");
+  });
+});
+</script>
+<% end %>

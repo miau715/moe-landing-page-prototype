@@ -1,0 +1,118 @@
+@import "bootstrap/bootstrap";
+@import "font-awesome";
+
+body {
+  padding-top: 60px;
+  background: #fafafa;
+}
+
+.required {
+  color: #c00;
+  margin-right: 5px;
+}
+
+.navbar h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  line-height: inherit;
+}
+
+.nav.nav-pills.project-switch {
+  li {
+    margin-right: 5px;
+  }
+  li a {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.resources-sidebar {
+  li {
+    i {
+      float: right;
+      padding: 5px 0;
+    }
+  }
+}
+
+.projects {
+  margin-bottom: 30px;
+}
+
+.main-form {
+  margin: 30px 0;
+}
+
+.project-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    border-radius: 5px;
+    border: #eee 1px solid;
+    background: #fff;
+    position: relative;
+    padding: 15px 15px 15px 245px;
+    min-height: 200px;
+    margin-bottom: 15px;
+    h3 {
+      margin-top: 0;
+    }
+    .screenshot {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: #eee 1px solid;
+      left: 15px;
+      top: 15px;
+    }
+    .screenshot img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .description {
+      margin-bottom: 30px;
+    }
+    .btn i {
+      margin-right: 5px;
+    }
+  }
+}
+
+section {
+  padding-top: 30px;
+}
+
+.resource-list {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+  li {
+    padding: 15px;
+    border: #eee 1px solid;
+    background: #fff;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    &.highlight {
+      background: #fcf8e3;
+      border: #fbeed5 1px solid;
+    }
+    h4 {
+      margin-top: 0;
+    }
+    .collapse-switch {
+      position: absolute;
+      top: 13px;
+      right: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .more-block {
+      margin-top: 15px;
+    }
+  }
+}

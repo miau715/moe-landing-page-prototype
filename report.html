@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>萌典入口網</title>
+<link href="stylesheets/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <h1><a class="brand" href="/index.html">萌典入口網</a></h1>
+      <div class="nav-collapse collapse navbar-responsive-collapse">
+        <ul class="nav">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="resources.html">參與專案</a></li>
+          <li><a href="publish.html">成果發表</a></li>
+          <li class="active"><a href="report.html">提出需求 / 回報問題</a></li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div>
+  </div>
+</div>
+  <div class="container">
+    <h2>提出需求 / 回報問題</h2>
+如果您對萌典相關專案有任何需求或問題，都可以在這裡反應。
+<!-- 考慮依據選擇的類型提供不同的 form -->
+
+<div class="main-form">
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label"><span class="required">*</span>類型</label>
+      <div class="controls">
+        <label class="radio inline">
+          <input type="radio" name="type" id="radio-request" value="request"> 提出需求
+        </label>
+        <label class="radio inline">
+          <input type="radio" name="type" id="radio-report" value="report"> 回報問題
+        </label>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label"><span class="required">*</span>主旨</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge">
+      </div>
+    </div>
+    <div class="control-group report-only">
+      <label class="control-label">問題頁面網址</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label"><span class="required">*</span>說明</label>
+      <div class="controls">
+        <textarea rows="5" class="input-xxlarge"></textarea>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">圖片</label>
+      <div class="controls">
+        <input type="file" title="上傳圖片" />
+      </div>
+    </div>
+    <div class="form-actions">
+      <a href="#" class="btn btn-primary">送出</a>
+    </div>
+  </form>
+</div>
+
+
+  </div>
+<script src="javascripts/jquery-2.0.3.min.js"></script>
+<script src="javascripts/bootstrap-dropdown.js"></script>
+<script src="javascripts/bootstrap-tab.js"></script>
+    <script src="javascripts/bootstrap.file-input.js"></script>
+<script>
+$(function(){
+  $('input[type=file]').bootstrapFileInput();
+  $(".report-only").hide();
+  $("input[type=radio][name=type]").on("click", function(){
+    if ($("#radio-report").prop("checked")) {
+        $(".report-only").slideDown("fast");
+    }
+    else {
+        $(".report-only").slideUp("fast");
+    }
+  });
+});
+</script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

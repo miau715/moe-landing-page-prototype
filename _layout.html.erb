@@ -15,6 +15,6 @@
 <% if content_for? :js %>
     <%= yield :js %>
 <% end %>
-<%= livereload_js %>
+<%= livereload_js if ENV["RACK_ENV"] != "production" %>
 </body>
 </html>

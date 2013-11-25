@@ -29,12 +29,19 @@ body {
 }
 
 .resources-sidebar {
+  ul {
+    margin-left: 0;
+  }
   li {
     i {
       float: right;
       padding: 5px 0;
     }
   }
+}
+
+.content-header[class*="span"], .resources[class*="span"] {
+  float: right;
 }
 
 .projects {
@@ -116,3 +123,36 @@ section {
     }
   }
 }
+
+@media (max-width: 767px) {
+  .project-list {
+    li {
+      padding: 15px 15px 15px 180px;
+      min-height: 150px;
+      .screenshot {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  .resources-sidebar {
+    ul {
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .project-list {
+    li {
+      padding: 15px;
+      min-height: none;
+      .screenshot {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@import "bootstrap/responsive";

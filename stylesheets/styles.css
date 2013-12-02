@@ -9100,133 +9100,181 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 
 /* line 4, ../sass/styles.scss */
 body {
-  padding-top: 60px;
-  background: #fafafa;
+  padding-top: 80px;
+  background: url("../images/subtle_stripes.png");
 }
 
 /* line 9, ../sass/styles.scss */
+a {
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+/* line 13, ../sass/styles.scss */
 .required {
   color: #c00;
   margin-right: 5px;
 }
 
-/* line 14, ../sass/styles.scss */
+/* line 18, ../sass/styles.scss */
+.navbar-inner {
+  height: 50px;
+}
+
+/* line 22, ../sass/styles.scss */
 .navbar h1 {
   margin: 0;
   padding: 0;
   font-size: 1em;
   line-height: inherit;
 }
+/* line 27, ../sass/styles.scss */
+.navbar h1 .brand {
+  padding: 15px 20px;
+}
 
-/* line 22, ../sass/styles.scss */
+/* line 32, ../sass/styles.scss */
+.navbar .nav > li > a {
+  padding: 15px;
+}
+
+/* line 37, ../sass/styles.scss */
 .nav.nav-pills.project-switch li {
   margin-right: 5px;
 }
-/* line 25, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 .nav.nav-pills.project-switch li a {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-/* line 32, ../sass/styles.scss */
+/* line 46, ../sass/styles.scss */
+.hero-unit {
+  background: #f8f5f5;
+  background: rgba(248, 245, 245, 0.8);
+  border: #d4d3d3 1px solid;
+}
+
+/* line 53, ../sass/styles.scss */
 .resources-sidebar ul {
   margin-left: 0;
 }
-/* line 36, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
 .resources-sidebar li i {
   float: right;
   padding: 5px 0;
 }
 
-/* line 43, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 .content-header[class*="span"], .resources[class*="span"] {
   float: right;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 68, ../sass/styles.scss */
 .projects {
   margin-bottom: 30px;
 }
 
-/* line 51, ../sass/styles.scss */
+/* line 72, ../sass/styles.scss */
 .main-form {
   margin: 30px 0;
+  background: #eee;
+  border: 16px #f9f9f9 solid;
+  box-shadow: #d4d4d4 0 3px 3px;
+  padding: 40px 20px 20px;
+}
+/* line 78, ../sass/styles.scss */
+.main-form .form-actions {
+  background: transparent;
 }
 
-/* line 55, ../sass/styles.scss */
+/* line 83, ../sass/styles.scss */
 .project-list {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   list-style: none;
+  background: #eee;
+  border: 16px #f9f9f9 solid;
+  box-shadow: #d4d4d4 0 3px 3px;
 }
-/* line 59, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
 .project-list li {
-  border-radius: 5px;
-  border: #eee 1px solid;
-  background: #fff;
   position: relative;
-  padding: 15px 15px 15px 245px;
+  padding: 30px 15px 30px 245px;
   min-height: 200px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
+  border-top: 1px solid #e5e5e5;
 }
-/* line 67, ../sass/styles.scss */
+/* line 98, ../sass/styles.scss */
+.project-list li:first-child {
+  border-top: none;
+}
+/* line 101, ../sass/styles.scss */
 .project-list li h3 {
   margin-top: 0;
 }
-/* line 70, ../sass/styles.scss */
+/* line 104, ../sass/styles.scss */
 .project-list li .screenshot {
   position: absolute;
   width: 200px;
   height: 200px;
   border: #eee 1px solid;
   left: 15px;
-  top: 15px;
+  top: 30px;
 }
-/* line 78, ../sass/styles.scss */
+/* line 112, ../sass/styles.scss */
 .project-list li .screenshot img {
   display: block;
   max-width: 100%;
   max-height: 100%;
 }
-/* line 83, ../sass/styles.scss */
+/* line 117, ../sass/styles.scss */
 .project-list li .description {
   margin-bottom: 30px;
 }
-/* line 86, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
 .project-list li .btn i {
   margin-right: 5px;
 }
+/* line 123, ../sass/styles.scss */
+.project-list li .btn {
+  margin-left: 5px;
+}
 
-/* line 92, ../sass/styles.scss */
+/* line 129, ../sass/styles.scss */
 section {
   padding-top: 30px;
 }
 
-/* line 96, ../sass/styles.scss */
+/* line 133, ../sass/styles.scss */
 .resource-list {
   list-style: none;
   margin: 0 0 30px;
   padding: 0;
 }
-/* line 100, ../sass/styles.scss */
+/* line 137, ../sass/styles.scss */
 .resource-list li {
   padding: 15px;
-  border: #eee 1px solid;
-  background: #fff;
+  background: #f8f5f5;
+  background: rgba(248, 245, 245, 0.8);
+  border: #d4d3d3 1px solid;
   position: relative;
   border-radius: 5px;
   margin-bottom: 5px;
 }
-/* line 107, ../sass/styles.scss */
+/* line 145, ../sass/styles.scss */
 .resource-list li.highlight {
   background: #fcf8e3;
+  background: rgba(252, 248, 227, 0.8);
   border: #fbeed5 1px solid;
 }
-/* line 111, ../sass/styles.scss */
+/* line 150, ../sass/styles.scss */
 .resource-list li h4 {
   margin-top: 0;
 }
-/* line 114, ../sass/styles.scss */
+/* line 153, ../sass/styles.scss */
 .resource-list li .collapse-switch {
   position: absolute;
   top: 13px;
@@ -9234,35 +9282,62 @@ section {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 121, ../sass/styles.scss */
+/* line 160, ../sass/styles.scss */
 .resource-list li .more-block {
   margin-top: 15px;
 }
 
+/* line 166, ../sass/styles.scss */
+.nav-tabs {
+  background: #f8f5f5;
+  background: rgba(248, 245, 245, 0.8);
+}
+
+/* line 171, ../sass/styles.scss */
+.btn {
+  background: #f8f8f8;
+  border: none;
+  border-bottom: #cccccc 1px solid;
+  filter: none;
+  box-shadow: #aaa 0 0 1px inset;
+}
+/* line 177, ../sass/styles.scss */
+.btn:hover {
+  background: #fff;
+}
+/* line 180, ../sass/styles.scss */
+.btn.btn-primary {
+  background: #6b0000;
+}
+/* line 182, ../sass/styles.scss */
+.btn.btn-primary:hover {
+  background: #850000;
+}
+
 @media (max-width: 767px) {
-  /* line 129, ../sass/styles.scss */
+  /* line 190, ../sass/styles.scss */
   .project-list li {
     padding: 15px 15px 15px 180px;
     min-height: 150px;
   }
-  /* line 132, ../sass/styles.scss */
+  /* line 193, ../sass/styles.scss */
   .project-list li .screenshot {
     width: 150px;
     height: 150px;
   }
 
-  /* line 139, ../sass/styles.scss */
+  /* line 200, ../sass/styles.scss */
   .resources-sidebar ul {
     position: relative;
   }
 }
 @media (max-width: 479px) {
-  /* line 147, ../sass/styles.scss */
+  /* line 208, ../sass/styles.scss */
   .project-list li {
     padding: 15px;
     min-height: none;
   }
-  /* line 150, ../sass/styles.scss */
+  /* line 211, ../sass/styles.scss */
   .project-list li .screenshot {
     display: none;
   }
